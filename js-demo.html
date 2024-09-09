@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <title>Javascript</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-color overflow-x-hidden">
+        <div class="col-12 fw-bold">
+            <div id="nav-icon-container" class="row nav-icon-alignment">
+                <div class="col-5 col-sm-5 col-md-4 col-lg-4 nav-icon-alignment">
+                    <img src="images/global.png" alt="Icon" class="icon-sizing">
+                    <a class="navbar-brand" href="#">ITWD6.408</a>
+                </div>
+                <div class="nav-positioning col-md-4 col-lg-4" >
+                    <div class="col ml-5">
+                        <div style="transition: 0s;" class="collapse navbar-collapse pr-5 justify-content-center" id="demo">
+                            <div class="navbar-nav">
+                                <a class="nav-link" href="index.html">HOME</a>
+                                <a class="nav-link" href="form.html">FORMS</a>
+                                <a class="nav-link" href="xml-rss.html">XML/RSS</a>
+                                <a class="nav-link active" aria-current="page" href="js-demo.html">JAVASCRIPT</a>
+                                <a class="nav-link" href="my-research.html">RESEARCH</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-positioning col-4 col-sm-4 col-md-4 col-lg-4 d-flex align-items-center justify-content-end">              
+                    <div class="d-inline-flex align-items-center justify-content-between w-25">
+                        <div style="position: relative; display: inline-block; right:150px;">
+                            <div class="icon-link-hover" style="border-left: 3px solid #333; padding-left: 15px; --bs-icon-link-transform: translate3d(0, -.125rem, 0); white-space: nowrap; width: 50px; overflow: visible;text-overflow: clip;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16"
+                                    style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#cart">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                </svg>
+                                <span class="total-count"></span>
+                            </div>
+                        </div>                    
+
+                        <div style="position: relative; display: inline-block; right:160px;">
+                            <div class="icon-link-hover" style="border-left: 3px solid #333; padding-left: 29px; border-right: 3px solid #333; padding-right: 20px; --bs-icon-link-transform: translate3d(0, -.125rem, 0);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cart-x-fill clear-cart" viewBox="0 0 16 16"
+                                    style="cursor: pointer;" aria-label="clear-cart">
+                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M7.354 5.646 8.5 6.793l1.146-1.147a.5.5 0 0 1 .708.708L9.207 7.5l1.147 1.146a.5.5 0 0 1-.708.708L8.5 8.207 7.354 9.354a.5.5 0 1 1-.708-.708L7.793 7.5 6.646 6.354a.5.5 0 1 1 .708-.708"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="position: absolute; right:100px;">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 16 16" class="bi bi-search"
+                                style="cursor: pointer;">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <button type="button" class="navbar-toggler ml-4" data-bs-toggle="collapse" data-bs-target="#demo" aria-controls="demo" >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>         
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!--Parent element/s for all demo slides-->
+        <!--Removed p-0 m-0 because it made this sections width longer than the page-->
+        <div class="container-fluid">
+            <div class="row">
+        <!------------------------------------>       
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 d-flex align-items-start justify-content-center px-sm-0 px-md-3 px-lg-3">
+                    <div class="row gy-1 px-3 pt-sm-0 pt-0 pb-5">
+                        <div id="button1" class="col-6 col-sm-6 col-md-12 col-lg-12 mt-lg-3 mt-md-3 accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#slideshow" aria-expanded="true" aria-controls="slideshow">
+                            <div class="border-5 border-dark w-100 text-center p-3">
+                                <p class="text-break timesnewroman fs-2 text-primary fw-bold">DEMO1</p>
+                            </div>
+                        </div>
+                    
+                        <div id="button2" class="col-6 col-sm-6 col-md-12 col-lg-12 mt-lg-3 mt-md-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#customization" aria-expanded="false" aria-controls="customization">
+                            <div class="border-5 border-dark w-100 text-center p-3">
+                                <p class="text-break timesnewroman fs-2 text-primary fw-bold">DEMO2</p>
+                            </div>
+                        </div>
+                    
+                        <div id="button3" class="col-6 col-sm-6 col-md-12 col-lg-12 mt-lg-3 mt-md-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#authentication" aria-expanded="false" aria-controls="authentication">
+                            <div class="border-5 border-dark w-100 text-center p-3">
+                                <p class="text-break timesnewroman fs-2 text-primary fw-bold">DEMO3</p>
+                            </div>
+                        </div>
+                    
+                        <div id="button4" class="col-6 col-sm-6 col-md-12 col-lg-12 mt-lg-3 mt-md-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ShoppingCart" aria-expanded="false" aria-controls="ShoppingCart">
+                            <div class="border-5 border-dark w-100 text-center p-3">
+                                <p class="text-break timesnewroman fs-2 text-primary fw-bold">DEMO4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion col-12 col-sm-12 col-md-8 col-lg-8 px-lg-5 pt-3" id="accordionExample">
+                    <!--#1 Slideshow-->
+                    <section class="accordion-collapse collapse show" id="slideshow" data-bs-parent="#accordionExample">
+                        <div class="container-fluid">
+                            <div class="container">
+
+                                <div class="col-12 d-block d-sm-block d-md-none d-lg-none d-xl-none pb-5">
+                                    <h1 class="timesnewroman fs-1 pb-4"><span class="fw-bold">Purpose: </span>Slideshow</h1>
+                                    <p class="timesnewroman fs-5 p-0 m-0">Create two types of slideshows: manual and automatic.</p>
+                                    <p class="timesnewroman fs-5 p-0 m-0">Each slide has a title, image, short description.</p>
+                                    <p class="timesnewroman fs-5 pb-4">There are two buttons: PREVIOUS & NEXT on manual slideshow.</p>
+                                </div>
+
+                                <!--manual slides-->
+                                <div class="container-fluid bg-warning-subtle border border-5 border-warning-subtle pt-5">
+                                    <div class="container">
+                                        <h1 class="timesnewroman fs-1 text-center pb-4 text-uppercase fw-bold">Manual slideshow</h1>
+                                        <div id="manualSlideshow" class="row">
+                                            <div class="col-2 col-sm-2 col-md-2 col-lg-2 d-flex align-items-center justify-content-center text-center ">
+                                                <button onclick="previousSlide()" type="button" class="btn bg-color h-auto fs-4 timesnewroman">Previous</button>
+                                            </div>
+                                            <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+                                                <!--center all elements inside the row-->
+                                                <div class="row d-flex align-items-center justify-content-center text-center">
+                                                    <p id="manualTitle" class="col-12 timesnewroman fs-3 fw-bold"></p>
+                                                    <img id="manualImage" src="" alt="Laptops Image" class="col-12 w-75"/>
+                                                    <!--define min and max height so the description doesnt affect the parent elements height-->                               
+                                                    <p id="manualDescription" class="col-12 p-0 m-0 overflow-y-auto mh-100 pt-4" style="min-height: 120px;"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 col-sm-2 col-md-2 col-lg-2 d-flex align-items-center justify-content-center text-center">
+                                                <button onclick="nextSlide()" type="button" class="btn bg-color h-auto fs-4 timesnewroman">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                </div>
+
+                                <!--Automatic slides column-->
+                                <div class="container-fluid bg-warning-subtle border border-5 border-warning-subtle pb-5 pt-5 mb-3 mt-3">
+                                    <div class="container">
+                                        <h1 class="timesnewroman fs-1 text-center pb-4 text-uppercase fw-bold">Automatic slideshow</h1>
+                                        <!--center the row within the container-->
+                                        <div id="manualSlideshow" class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-lg-8">
+                                                <!--center all elements inside the row-->
+                                                <div class="row d-flex align-items-center justify-content-center text-center">
+                                                    <p id="autoTitle" class="col-12 timesnewroman fs-3 fw-bold"></p>
+                                                    <img id="autoImage" src="" alt="Laptops Image" class="col-12 w-50"/>
+                                                    <!--define min and max height so the description doesnt affect the parent elements height -->                               
+                                                    <p id="autoDescription" class="col-12 p-0 m-0 overflow-y-auto mh-100 pt-4" style="min-height: 120px;"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section> 
+
+                    <!--#2 Webpage customization-->
+                    <section class=" min-vh-100 flex-column accordion-collapse collapse" id="customization" data-bs-parent="#accordionExample">
+                        <div class="container-fluid">
+                            <div class="container">
+
+                                <div class="col-12 d-block d-sm-block d-md-none d-lg-none d-xl-none pb-5">
+                                    <h1 class="timesnewroman fs-1 pb-4"><span class="fw-bold">Purpose: </span>Webpage customization</h1>
+                                    <p class="timesnewroman fs-5 p-0 m-0">
+                                        In this demo, there are three dropdown menu (background color, text size, image)
+                                        that allow users to select an option and change then the webpage background
+                                        color, font size, image accordingly.
+                                    </p>
+                                </div>
+
+                            </div>
+                            
+                            <div class="container">
+                                <div class="col-12 col-sm-12 col-md-8 col-lg-8 border border-dark border-2 p-3 w-100">
+                                    <div class="col-12">
+                                        <p id="CustomTitle" class="col-12 fs-3 fw-bold">HP Notebook</p>
+                                        <img id="backgroundImage" src="images/image1.jpg" alt="Background Image" class="img-thumbnail h-100 w-auto">
+                                        <p id="CustomDescription" class="col-8 m-2 h-100" style="min-height: 120px;">Built for both productivity and entertainment, this HP Laptop PC lets you stay portable with its thin and light design. Enjoy vivid, flicker-free images on a micro-edge display and tackle busy workdays with an Intel® Core Processor and abundant storage.</p>
+
+                                    </div>
+                                    <div class="row pt-4 g-3">
+                                        <!-- Background Color Selection -->
+                                        <div class="col-12 d-flex align-items-center mb-0 mr-0">
+
+                                            <p class="m-0 me-2 text-nowrap">Select background color:</p>
+                                            <select id="bgColorSelect" class="form-select w-25" onchange="changeBgColor()">
+                                                <option value="white">White</option>
+                                                <option value="lightblue">Light Blue</option>
+                                                <option value="lightgreen">Light Green</option>
+                                            </select>
+                                            <p class=" m-0 me-2 text-nowrap">Select Text size:</p>
+                                            <select id="textSizeSelect" class="form-select w-25" onchange="changeTextSize()">
+                                                <option value="16px">Small</option>
+                                                <option value="20px">Medium</option>
+                                                <option value="24px">Large</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Image Selection -->
+                                        <div class="col-12 d-flex align-items-center mt-0">
+                                            <p class="m-0 me-2 text-nowrap">Select image:</p>
+                                            <select id="imageSelect" class="form-select w-25" onchange="changeImage(this.selectedIndex)">
+                                                <option value="0">Image 1</option>
+                                                <option value="1">Image 2</option>
+                                                <option value="2">Image 3</option>
+                                            </select>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>                 
+                    </section>
+                    
+                    <!--#3 Authentication-->
+                    <section class="min-vh-100 flex-column accordion-collapse collapse" id="authentication" data-bs-parent="#accordionExample">
+                        <div class="container-fluid">
+                            <div class="container">
+
+                                <div class="col-12 d-block d-sm-block d-md-none d-lg-none d-xl-none pb-5">
+                                    <h1 class="timesnewroman fs-1 pb-4"><span class="fw-bold">Purpose: </span>Authentication</h1>
+                                    <p class="timesnewroman fs-5 p-0 m-0">
+                                        In this demo, add two sections: 1 section for sign-up and another for sign-in that
+                                        allows users to create a new account and login if their account exists.
+                                    </p>
+                                </div>
+
+                                <div class="row">
+                                    <section class="col-12border border-5 border-dark bg-secondary-subtle pt-5 pb-5 gx-5">             
+                                        <h5>SIGN UP</h5>
+                                        <div class="row">   
+                                            <label class="col-3">Username: </label>
+                                            <input class="col-8" type="username" id="signup_username" placeholder="username" >    
+                                        </div>  
+                                        <div class="row">                   
+                                            <label class="col-3">Password: </label>
+                                            <input class="col-8" type="password" id="signup_password" placeholder="password">
+                                        </div>              
+                                        <input type="button" value="Sign up" class="btn btn-secondary" onclick="createUser()">    
+                                    </section>
+                        
+                                    <section class="col-12 col-md-12 border border-5 border-top-0 border-dark bg-secondary-subtle pt-5 pb-5 gx-5">
+                                        <h5>SIGN IN</h5>    
+                                        <div class="row">
+                                            <label class="col-3">Username: </label>
+                                            <input class="col-8" type="text" id="login_username" placeholder="username">  
+                                        </div>  
+                                        <div class="row">               
+                                            <label class="col-3">Password: </label>
+                                            <input class="col-8" type="password" id="login_password" placeholder="password">
+                                        </div>              
+                                        <input type="button" value="Login" class="btn btn-secondary" onclick="checkUser()">          
+                                    </section>      
+                                </div>  
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--#4 Shopping cart-->
+                    <section class="min-vh-100 accordion-collapse collapse" id="ShoppingCart" data-bs-parent="#accordionExample">
+                        <div class="container-fluid">
+                            <div class="container">
+
+                                <div class="col-12 d-block d-sm-block d-md-none d-lg-none d-xl-none pb-5">
+                                    <h1 class="timesnewroman fs-1 pb-4"><span class="fw-bold">Purpose: </span> Online shop</h1>
+                                    <p class="timesnewroman fs-5 p-0 m-0">
+                                        In this demo, create a grid composing of 6 products. Each product has a title,
+                                        image, price, description and “Add to Cart” button.
+                                        When user clicks “Add to Cart”, add that product to the shopping cart.
+                                        When user clicks “Shopping Cart” icon, display all the selected products & total
+                                        price.
+                                    </p>
+                                </div>
+                            
+                                <!-- Asset items container -->
+                                <div class="container">
+                                    <div class="row">
+                                    <!-- Start Asset Item -->
+                                        <div class="col-12 col-md-6 mb-4">
+                                            <div class="card shadow-sm h-100">
+                                                <div class="card-body text-center">
+                                                    <img src="images/image1.jpg" alt="title" class="img-fluid" style="max-width: 75%; height: auto;">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-text text-start fs-3 fw-bold">$375</h5>
+                                                    <p class="card-title text-start fw-bold">HP Notebook</p>
+                                                    <p class="description card-text text-start">
+                                                        Built for both productivity and entertainment, this HP Laptop PC lets you stay portable with its thin and light design. Enjoy vivid, flicker-free images on a micro-edge display and tackle busy workdays with an Intel® Core Processor and abundant storage.
+                                                    </p>
+                                                    <div class="d-grid gap-2">
+                                                        <button type="button" class="btn btn-outline-dark add-to-cart fs-3" data-name="HP Notebook" data-image="image_url" data-price="375">Add to Cart</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 mb-4">
+                                            <div class="card shadow-sm h-100">
+                                                <div class="card-body text-center">
+                                                    <img src="images/image2.jpg" alt="title" class="img-fluid" style="max-width: 75%; height: auto;">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-text text-start fs-3 fw-bold">$750.00</h5>
+                                                    <p class="card-title text-start fw-bold">Microsoft Surface Pro</p>
+                                                    <p class="description card-text text-start">
+                                                    Surface Pro, 11th Edition. Exceptional performance, all-day battery life, and new, unique AI experiences help make your device smarter, faster, and more creative."
+                                                    </p>
+                                                    <div class="d-grid gap-2">
+                                                        <button type="button" class="btn btn-outline-dark add-to-cart fs-3" data-name="Microsoft Surface Pro" data-image="image_url" data-price="750">Add to Cart</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 mb-4">
+                                            <div class="card shadow-sm h-100">
+                                                <div class="card-body text-center">
+                                                    <img src="images/image3.jpg" alt="title" class="img-fluid" style="max-width: 75%; height: auto;">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-text text-start fs-3 fw-bold">$1,200</h5>
+                                                    <p class="card-title text-start fw-bold">Acer Aspire</p>
+                                                    <p class="description card-text text-start">
+                                                        Choose the ready-to-go Aspire 3 with an AMD Ryzen 5000 Series Processor made for practical multitasking and productivity. With ease-of-use at its core, this family-friendly laptop is ready when you are.
+                                                    </p>
+                                                    <div class="d-grid gap-2">
+                                                        <button type="button" class="btn btn-outline-dark add-to-cart fs-3" data-name="Acer Aspire" data-image="image_url" data-price="1200">Add to Cart</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 mb-4">
+                                            <div class="card shadow-sm h-100">
+                                                <div class="card-body text-center">
+                                                    <img src="images/image4.jpg" alt="title" class="img-fluid" style="max-width: 75%; height: auto;">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-text text-start fs-3 fw-bold">$499.00</h5>
+                                                    <p class="card-title text-start fw-bold">Dell Inspiron</p>
+                                                    <p class="description card-text text-start">
+                                                        The Dell Inspiron 15.6 inch laptop is perfect for everyday use, in a stylish, thoughtful design. Featuring the latest AMD processors, you can finish your to-do list in no time.
+                                                    </p>
+                                                    <div class="d-grid gap-2">
+                                                        <button type="button" class="btn btn-outline-dark add-to-cart fs-3" data-name="Dell Inspiron" data-image="image_url" data-price="499">Add to Cart</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 mb-4">
+                                            <div class="card shadow-sm h-100">
+                                                <div class="card-body text-center">
+                                                    <img src="images/image5.jpg" alt="title" class="img-fluid" style="max-width: 75%; height: auto;">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-text text-start fs-3 fw-bold">$250.00</h5>
+                                                    <p class="card-title text-start fw-bold">Yoga 7</p>
+                                                    <p class="description card-text text-start">
+                                                        The Lenovo Yoga 7 2-in-1's unibody chassis houses AMD Ryzen 8040 Series processor. Shaped to move with your ideas, it flips into multiple modes so you can tackle work and play from any angle.
+                                                    </p>
+                                                    <div class="d-grid gap-2">
+                                                        <button type="button" class="btn btn-outline-dark add-to-cart fs-3" data-name="Yoga 7" data-image="image_url" data-price="0.5">Add to Cart</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                            
+                                    </div>
+                                </div>        
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Modal -->
+                    <div class="modal fade overflow-x-hidden" id="cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <table class="show-cart table">
+                                        
+                                    </table>
+                                <div>Total price: $<span class="total-cart"></span></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Order now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div> 
+
+        <footer class="mt-5 pt-5">
+            <div id="footer" class="container-fluid bg-color">
+                <div class="row pb-3 pt-1">
+
+                    <div class="small-socials col-12 col-sm-12 col-md-3 col-lg-4 d-flex justify-content-start">
+                        <a href="#" class="fa fa-linkedin" alt="Linkedin"></a>
+                        <a href="#" class="fa fa-youtube" alt="YouTube"></a>
+                        <a href="#" class="fa fa-twitter" alt="X"></a>
+                        <a href="#" class="fa fa-facebook" alt="Facebook"></a>
+                        <a href="#" class="fa fa-instagram" alot="instagram"></a>
+                    </div>
+
+                    <div class="small-icon fw-bold col-8 col-sm-8 col-md-4 col-lg-4 d-flex align-items-center justify-content-center">
+                        <a>&#169; 2024 Tainui Weti</a>
+                    </div>
+
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 d-flex align-items-center justify-content-end">
+                        <a href="#" class="text-primary fs-9 fw-bold text-decoration-none">Privacy policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>  
+    </main>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="javascript.js"></script>
+</html>

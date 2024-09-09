@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <title>xml-rss</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-color overflow-x-hidden">
+        <div class="col-12 fw-bold">
+            <div id="nav-icon-container" class="row nav-icon-alignment">
+                <div class="col-5 col-sm-5 col-md-4 col-lg-4 nav-icon-alignment">
+                    <img src="images/global.png" alt="Icon" class="icon-sizing">
+                    <a class="navbar-brand" href="#">ITWD6.408</a>
+                </div>
+                <div class="nav-positioning col-3 col-sm-3 col-md-4 col-lg-4" >
+                    <div class="col ml-5">
+                        <div style="transition: 0s;" class="collapse navbar-collapse pr-5 justify-content-center" id="demo">
+                            <div class="navbar-nav">
+                                <a class="nav-link" href="index.html">HOME</a>
+                                <a class="nav-link" href="form.html">FORMS</a>
+                                <a class="nav-link active" aria-current="page" href="xml-rss.html">XML/RSS</a>
+                                <a class="nav-link" href="js-demo.html">JAVASCRIPT</a>
+                                <a class="nav-link" href="my-research.html">RESEARCH</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-positioning col-4 col-sm-4 col-md-4 col-lg-4 d-flex align-items-center justify-content-end">  
+                    <svg style="position: absolute; right: 100px;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 16 16" class="bi bi-search">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                    <button type="button" class="navbar-toggler ml-4" data-bs-toggle="collapse" data-bs-target="#demo"aria-controls="demo" >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>         
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 d-flex align-items-start justify-content-center px-sm-0 px-md-3 px-lg-3">
+                    <div class="row w-100 g-0 px-3 pt-sm-0 pt-0">
+                        <div id="button1" class="col-6 col-sm-6 col-md-12 col-lg-12 mt-lg-3 mt-md-3 accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#xmlcollapse" aria-expanded="true"  aria-controls="xmlcollapse">
+                            <div class="border-5 border-dark w-100 text-center p-3">
+                                <p class="text-break timesnewroman fs-2 text-primary fw-bold">XML RULES</p>
+                            </div>
+                        </div>
+
+                        <div id="button2" class="col-6 col-sm-6 col-md-12 col-lg-12 mt-lg-3 mt-md-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rsscollapse" aria-expanded="false" aria-controls="rsscollapse">
+                            <div class="border-5 border-dark w-100 text-center p-3">
+                                <p class="text-break timesnewroman fs-2 w-100 h-100 text-primary fw-bold">RSS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion col-12 col-sm-12 col-md-8 col-lg-8" id="accordionExample">
+                    <section id="xmlcollapse" class="accordion-collapse collapse show container-fluid p-5" data-bs-parent="#accordionExample">
+                        <div class="container">
+                            <div class="col-12 pt-4">
+                                <p class="fs-3 fw-bold timesnewroman">XML Syntax rules</p>
+                                <p class="lead">You must follow these rules when you create XML syntax:</p>
+                                <p class="p-0 m-0">- All XML elements must have a closing tag.</p>
+                                <p class="p-0 m-0">- XML tags are case sensitive.</p>
+                                <p class="p-0 m-0">- All XML elements must be properly nested.</p>
+                                <p class="p-0 m-0">- All XML documents must have a root element.</p>
+                                <p class="p-0 m-0">- Attribute values must always be quoted.</p>
+                            </div>
+                            <div class="row gx-3 gy-4 pt-3 ">
+
+                                <div class="d-flex col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <div class="p-3 bg-light border border-dark w-100">
+                                        <p class="fs-5 fw-bold">Rule 1: All XML elements must have a closing tag</p>
+                                        <p class="pb-2">
+                                            It is illegal to omit the closing tag when you are creating XML syntax. 
+                                            XML elements must have a closing tag.
+                                        </p>
+                                        <p class="text-danger fw-bold">Incorrect</p>
+                                        <div class="bg-dark text-white p-3">
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&lt;body&gt;</span>See Spot run.<span class="text-primary">&lt;/body&gt;</span></small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&lt;body&gt;</span>See Spot catch the ball.<span class="text-primary">&lt;/body&gt;</span></small>
+                                            </p>
+                                        </div>
+
+                                        <p class="text-success fw-bold pt-3">Correct</p>
+
+                                        <div class="bg-dark text-white p-3">
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&lt;body&gt;</span>Spot run.<span class="text-primary">&lt;/body&gt;</span></small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&lt;body&gt;</span>See Spot catch the ball.<span class="text-primary">&lt;/body&gt;</span></small>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex col-sm-12 col-md-12 col-lg-6">
+                                    <div class="p-3 bg-light border border-dark w-100">
+                                        <p class="fs-5 fw-bold">Rule 2: XML tags are case sensitive</p>
+                                        <p class="pb-2">
+                                            When you create XML documents, the tag &lt;Body&gt; is different from the tag &lt;body&gt;.
+                                        </p>
+                                        <p class="text-danger fw-bold">Incorrect</p>
+
+                                        <div class="bg-dark text-white p-3">
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&lt;Body&gt;</span>See Spot run.<span class="text-primary">&lt;/body&gt;</span></small>
+                                            </p>
+                                        </div>
+                                        
+                                        <p class="text-success fw-bold pt-3">Correct</p>
+                                        
+                                        <div class="bg-dark text-white p-3">
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&lt;body&gt;</span>Spot run.<span class="text-primary">&lt;/body&gt;</span></small>
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="d-flex col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <div class="p-3 bg-light border border-dark w-100">
+                                        <p class="fs-5 fw-bold">Rule 3: All XML elements must be properly nested</p>
+                                        <p class="pb-2">
+                                            Improper nesting of tags makes no sense to XML.
+                                        </p>
+                                        <p class="text-danger fw-bold">Incorrect</p>
+                                        <div class="bg-dark text-white p-3">
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&lt;b&gt;&lt;i&gt;</span>This text is bold and italic.<span class="text-primary">&lt;/b&gt;&lt;/i&gt;</span></small>
+                                            </p>
+                                        </div>
+                                        
+                                        <p class="text-success fw-bold pt-3">Correct</p>
+                                        
+                                        <div class="bg-dark text-white p-3">
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&lt;b&gt;&lt;i&gt;</span>This text is bold and italic.<span class="text-primary">&lt;/i&gt;&lt;/b&gt;</span></small>
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="d-flex col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <div class="p-3 bg-light border border-dark w-100">
+                                        <p class="fs-5 fw-bold">Rule 4: All XML documents must have a root element</p>
+                                        <p class="pb-2">
+                                            All XML documents must contain a single tag pair to define a root element.
+                                             All other elements must be within this root element. All elements can have sub elements (child elements).
+                                             Sub elements must be correctly nested within their parent element.
+                                        </p>
+                                        <p class="text-body-emphasis fw-bold">Example:</p>
+                                        <div class="bg-dark text-white p-3">
+                                            <p class="p-0 m-0"><small><span class="text-primary">&lt;root&gt;</span></small></p>
+                                            <p class="p-0 m-0"><small>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-primary">&lt;child&gt;</span></small></p>
+                                            <p class="p-0 m-0"><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-primary">&lt;subchild&gt;</span>Example of sub element text<span class="text-primary">&lt;/subchild&gt;</span></small></p>
+                                            <p class="p-0 m-0"><small>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-primary">&lt;/child&gt;</span></small></p>
+                                            <p class="p-0 m-0"><small><span class="text-primary">&lt;/root&gt;</span></small></p>                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <div class="p-3 bg-light border border-dark w-100">
+                                        <p class="fs-5 fw-bold">Rule 5: Attribute values must always be quoted
+                                        </p>
+                                        <p class="pb-2">
+                                            It is illegal to omit quotation marks around attribute values. 
+                                            XML elements can have attributes in name/value pairs; however, 
+                                            the attribute value must always be quoted.                                        
+                                        </p>
+                                        <p class="text-danger fw-bold">Incorrect</p>
+                                        <div class="bg-dark border border-3 border-secondary text-white p-2">
+                                            <p class="p-0 m-0"><small><span class="text-primary">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</span></small></p>
+                                            <p class="p-0 m-0"><small><span class="text-primary">&lt;note date="05/05/05"&gt;</span></small></p>
+                                            <p class="p-0 m-0"><small><span class="text-primary">&lt;to&gt;</span>Dick<span class="text-primary">&lt;/to&gt;</span></small></p>
+                                            <p class="p-0 m-0"><small><span class="text-primary">&lt;from&gt;</span>Jane<span class="text-primary">&lt;/from&gt;</span></small></p>
+                                            <p class="p-0 m-0"><small><span class="text-primary">&lt;/note&gt;</span></small></p>
+                                        </div>
+                                        
+                                        <p class="text-success fw-bold pt-3">Correct</p>
+                                        
+                                        <div class="bg-dark border border-3 border-secondary text-white p-2">
+                                            <p class="p-0 m-0"><small><span class="text-primary">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</span></small></p>
+                                            <p class="p-0 m-0"><small><span class="text-primary">&lt;note date="05/05/05"&gt;</span></small></p>
+                                            <p class="p-0 m-0"><small><span class="text-primary">&lt;to&gt;</span>Dick<span class="text-primary">&lt;/to&gt;</span></small></p>
+                                            <p class="p-0 m-0"><small><span class="text-primary">&lt;from&gt;</span>Jane<span class="text-primary">&lt;/from&gt;</span></small></p>
+                                            <p class="p-0 m-0"><small><span class="text-primary">&lt;/note&gt;</span></small></p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="d-flex col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <div class="p-3 bg-light border border-dark w-100">
+                                        <p class="fs-5 fw-bold">An element can contain:</p>
+                                        <p class="pb-2">
+                                            The syntax for writing comments in XML is similar to that of HTML:
+                                        </p>
+                                        <ul class="pb-2">
+                                            <li>text</li>
+                                            <li>attributes</li>
+                                            <li>other elements</li>
+                                            <li>or a mix of the above</li>
+                                        </ul>                                       
+                                        <p class="text-body-emphasis fw-bold">Example:</p>
+                                        <div class="bg-dark border border-3 border-secondary text-white p-2">
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&lt;?xml version="1.0" encoding="UTF-8" standalone="no" ?&gt;</span></small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small class="text-success">&lt;!--Root node/element (tag)--&gt;</small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&lt;contact-info&gt;</span></small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small class="text-success">&lt;!--Children nodes/elements (tag)--&gt;</small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;</span>Daniel Dang<span class="text-primary">&lt;/name&gt;</span></small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;company&gt;</span>EIT<span class="text-primary">&lt;/company&gt;</span></small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;email&gt;</span>ddang@eit.ac.nz<span class="text-primary">&lt;/email&gt;</span></small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;address category="work"&gt;</span></small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small class="text-success">&lt;!--Nested children nodes/elements (tag).--&gt;</small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;street&gt;</span>501 Gloucester<span class="text-primary">&lt;/street&gt;</span></small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;City&gt;</span>Napier<span class="text-primary">&lt;/City&gt;</span></small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;postcode&gt;</span>4112<span class="text-primary">&lt;/postcode&gt;</span></small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/address&gt;</span></small>
+                                            </p>
+                                            <p class="p-0 m-0">
+                                                <small><span class="text-primary">&lt;/contact-info&gt;</span></small>
+                                            </p>                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="rsscollapse" class="accordion-collapse collapse container-fluid p-5" data-bs-parent="#accordionExample">
+                        <div class="container">
+                            <div class="col-12 pt-4">
+                                <p class="fs-3 fw-bold timesnewroman">Work with RSS feed</p>
+                                <p class="lead">RSS stands for Really Simple Syndication and it's a way for you to receive updates online 
+                                    from many different websites
+                                    without having to manually go to the sites and check for updates.</p>
+                            </div>
+                            <div>
+                                <section id="rssFeed"></section>   
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div id="footer" class="container-fluid bg-color">
+                <div class="row pb-3 pt-1">
+
+                    <div class="small-socials col-12 col-sm-12 col-md-3 col-lg-4 d-flex justify-content-start">
+                        <a href="#" class="fa fa-linkedin" alt="Linkedin"></a>
+                        <a href="#" class="fa fa-youtube" alt="YouTube"></a>
+                        <a href="#" class="fa fa-twitter" alt="X"></a>
+                        <a href="#" class="fa fa-facebook" alt="Facebook"></a>
+                        <a href="#" class="fa fa-instagram" alot="instagram"></a>
+                    </div>
+
+                    <div class="small-icon fw-bold col-8 col-sm-8 col-md-4 col-lg-4 d-flex align-items-center justify-content-center">
+                        <a>&#169; 2024 Tainui Weti</a>
+                    </div>
+
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 d-flex align-items-center justify-content-end">
+                        <a href="#" class="text-primary fs-9 fw-bold text-decoration-none">Privacy policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>  
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="javascript.js"></script>
+</html>
